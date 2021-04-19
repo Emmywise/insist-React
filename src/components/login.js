@@ -1,34 +1,17 @@
 import React, { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
-// import { Link } from 'react-router';
 
-
-// function Pogin ()  {
-//     let history = useHistory ();
-// }
 function Login () {
     const  history = useHistory()
 
-// function Login() {
+
     const [formData, setFormData] = useState({username:"", password: ""})
-    // state = {
-    //     credentials: {username: '', password: ''}
-    // }
     
     
 
-    // login = event => {
-    //     console.log('this.state.credentials');
-    //     fetch('http://127.0.0.1:80/api/user-login/', {
-    //         method: 'POST',
-    //         headers: {'Content-Type': 'application/json'},
-    //         body: this.state.credentials
-    //     }).then(data => {
-    //         console.log(data)
-    //     }).catch(error => console.error(error))
-    // }
+ 
     const handleLogin = event => {
-        // let history = useHistory ();
+       
 
         console.log('this.state.credentials');
         fetch('http://127.0.0.1:80/api/user-login/', {
@@ -78,7 +61,7 @@ function Login () {
                 </label>
                 <br/>
                 <button onClick={handleLogin}>Login</button>
-                {/* <button onClick={() => {history.push("/dashboard");} */}
+              
                
                 <button><Link to="/register">Signup if no login!</Link></button>
             </header>
